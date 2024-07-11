@@ -9,7 +9,9 @@ const initialState = {
 export const getInitialStateAsync = createAsyncThunk(
   "home/getInitialState",
   (Arg, thunkAPI) => {
-    fetch("https://my-json-server.typicode.com/jaiswalaryan/data/products")
+    // fetch("https://my-json-server.typicode.com/jaiswalaryan/data/products")
+    // fetch("https://dummyjson.com/products?limit=100")
+    fetch("https://my-json-server.typicode.com/rishuranjan21/data/products/")
       .then((res) => res.json())
       .then((data) => {
         thunkAPI.dispatch(actions.setInitialState(data));
